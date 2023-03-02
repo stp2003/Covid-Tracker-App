@@ -1,3 +1,4 @@
+import 'package:covid_tracker_app/constants/colors.dart';
 import 'package:covid_tracker_app/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -15,7 +16,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Covid Tracker App Flutter.',
-      theme: ThemeData.dark().copyWith(),
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: bgColor,
+      ),
       home: const SplashScreen(),
     );
   }
